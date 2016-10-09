@@ -1,0 +1,9 @@
+{
+  "name": "ghostthemingpackage",
+  "version": "1.0",
+  "dependencies": {
+    "lesshat": "git://github.com/csshat/lesshat.git#~1.1.2",
+    "normalize-css": "latest",
+    "modernizr": "latest"
+  }
+}

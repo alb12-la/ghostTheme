@@ -1,0 +1,47 @@
+.BodyColor () {
+    background-color: @color_01;
+    color: @color_05;
+}
+
+.LinkColor () {
+    color: @color_03;
+}
+
+.LinkHoverColor () {
+    color: @color_02;
+}
+
+.HeaderColor () {
+    background-color: white;
+    
+
+
+}
+
+.ArticleColor () {
+    background: white;
+    border: 0.063rem solid darken(@color_01, 10%);
+    a, a:link, a:visited {
+        color: @color_03;
+    }
+    a:hover, a:focus {
+        color: @color_02;
+    }
+}
+
+.PostTitleColor () {
+    background-color: @color_03;
+    //background-image: url(../images/posttitlebg.jpg);
+    border: 0.063rem solid darken(@color_03, 10%);
+    color: white;
+    a, a:link, a:visited {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover, a:focus {
+        color: @color_01;
+    }
+}
+//**
+// Mixins
+//**
