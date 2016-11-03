@@ -1,27 +1,140 @@
 {{!< default}}
-{{> header}}
-<main class="main_uber" role="main">
+
 {{#post}}
-<article class="article_uber" role="article" itemscope itemtype="http://schema.org/Article">
-<header class="postheader_uber">
-<time class="date_uber" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+{{navigation}}
+
+{{#if image}}
+<!--<div class="img_header css-gradient" style="background-image:url({{{image}}})"> -->
+  <div class="img_header css-gradient" style="  background: linear-gradient(0deg, rgba(6,6,6,.40), rgba(0, 64, 146, 0), transparent),url({{{image}}}); background-size:cover;">
+
+
+
+  <header class="post-header ">
+  <h1 class="post-title" itemprop="headline">{{title}}</h1>
+  <h3 class="post-info"> {{author.name}} | <time class="date_uber" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
+  {{#if tags}}
+  <div class="post-tags">
+  {{tags separator=" | "}}
+  </div>
+  {{/if}}
+  </header>
+
+
+  <style>
+
+  .img_header{
+  position: relative;
+
+  }
+  .css-gradient:after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+  }
+
+
+  .post-header{
+    width: 750px;
+  /* margin: auto; */
+  left: 50%;
+  bottom: 18px;
+  position: absolute;
+  transform: translateX(-50%);
+  }
+  </style>
+
+
+
+
+</div>
+{{else}}
+
+    <header class="post-header-alt">
+    <h1 class="post-title" itemprop="headline">{{title}}</h1>
+    <h3 class="post-info"> {{author.name}} | <time class="date_uber" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
+    {{#if tags}}
+    <div class="post-tags">
+    {{tags separator=" | "}}
+    </div>
+    {{/if}}
+    </header>
+
+
+
+
+
+
+  <style>
+
+    .css-gradient:after {
+      content: '';
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 0;
+      left: 0;
+      background: rgba(255, 0, 0, 0.5);
+    }
+
+
+    .post-header-alt{
+    width: 750px;
+    margin: auto;
+    left: 50%;
+    bottom: 18px;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+{{/if}}
+
+
+
+
+
+
+<div class="wrapper_uber">
+
+
+
+
+<main class="main_uber" role="main">
+
+
+
+<article class="article-container" role="article" itemscope itemtype="http://schema.org/Article">
+<!--<header class="postheader_uber">
 <h1 class="posttitle_uber" itemprop="headline">{{title}}</h1>
-</header>
+<h3 class="post-info"> {{author.name}} | <time class="date_uber" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
+{{#if tags}}
+<div class="posttags_uber">
+{{tags separator=" | "}}
+</div>
+{{/if}}
+</header> -->
 <div class="postcontent_uber" itemprop="articleBody">
 {{content}}
 </div>
-{{#if tags}}
-<div class="posttags_uber">
-Tags: {{tags separator=" | "}}
-</div>
-{{/if}}
+
     <div class="sharepost_uber">
     <h4 class="share_uber">Share this post: &nbsp;</h4>
     <a class="share_uber icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_uber">Twitter</span></a>
     <a class="share_uber icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_uber">Facebook</span></a>
     <a class="share_uber icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_uber">Google+</span></a>
     </div>
-        {{#if author}}
+      <!-- {{#if author}}
         <footer class="postfooter_uber">
         <address itemscope itemtype="http://schema.org/Person">
         {{#if author.image}}
@@ -36,7 +149,7 @@ Tags: {{tags separator=" | "}}
         <p>{{author.bio}}</p>
         </div>
         </footer>
-        {{/if}}
+        {{/if}}  -->
 </article>
 {{/post}}
 {{#if pagination}}
@@ -45,4 +158,4 @@ Tags: {{tags separator=" | "}}
 </div>
 {{/if}}
 </main>
-{{>footer}}
+</div>

@@ -1,0 +1,14 @@
+<div class="nav-wrapper">
+  <div class="nav-container">
+    <div class="col-sm-2">
+       <h1>ALB16</h1>
+    </div>
+    <ul class="nav" style="width 50px;margin:auto;">
+        <!-- Loop through the navigation items -->
+        {{#foreach navigation}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+        <!-- End the loop -->
+    </ul>
+    </div>
+</div>

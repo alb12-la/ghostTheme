@@ -1,46 +1,72 @@
 .BodyColor () {
-    background-color: @color_01;
+    background-color: @color_02;
     color: @color_05;
 }
 
 .LinkColor () {
-    color: @color_03;
+
 }
 
 .LinkHoverColor () {
-    color: @color_02;
+
 }
 
-.HeaderColor () {
-    background-color: white;
-    
-
-
+  .HeaderColor () {
+  }
+.blogtitle_uber(){
+  color: white;
 }
 
 .ArticleColor () {
-    background: white;
-    border: 0.063rem solid darken(@color_01, 10%);
-    a, a:link, a:visited {
-        color: @color_03;
+  background: white;
+  //border: 1px solid rgba(0, 0, 0, 0.09);
+  a, a:link, a:visited {
+      color: @color_03;
+  }
+  a:hover, a:focus {
+      color: @color_01;
+  }
+
+  .read-more-button a, .read-more-button a:visited,.read-more-button a:link{
+    color: @color_02;
+  }
+
+
+}
+
+
+
+.PostTitleColor-black(){
+  color: black;
+   a, a:link, a:visited {
+      text-decoration: none;
+  }
+ .posttitle_uber a:hover, a:focus {
+    color: black;
+  }
+
+}
+
+
+.PostTitleColor () {
+
+    color: @color_02;
+     a, a:link, a:visited {
+        text-decoration: none;
     }
-    a:hover, a:focus {
-        color: @color_02;
+   .posttitle_uber a:hover, a:focus {
+      color: @color_01;
     }
 }
 
-.PostTitleColor () {
-    background-color: @color_03;
-    //background-image: url(../images/posttitlebg.jpg);
-    border: 0.063rem solid darken(@color_03, 10%);
+
+
+
+
+.btn-default,.btn-default:hover, .btn-default a {
     color: white;
-    a, a:link, a:visited {
-        color: white;
-        text-decoration: none;
-    }
-    a:hover, a:focus {
-        color: @color_01;
-    }
+    background-color: #1B1B1B;
+    border-color: #ccc;
 }
 //**
 // Mixins

@@ -7,18 +7,24 @@
     font-family: @header_font;
     line-height: 1.313em;
     font-weight: 400;
+    text-decoration: none;
+
 }
 
 //**
 // Styles
 //**
+.post-info{
+  font-size:.9em;
 
+}
 body {
     .BodyColor;
     margin: 0;
     font-family: @default_font;
     line-height: @golden + 0em; //set the regular line height to the golden ratio
     font-weight: 300;
+    text-decoration: none;
 }
 
 a {
@@ -27,6 +33,7 @@ a {
 
 a:link, a:visited {
   .LinkColor;
+  text-decoration: none;
 }
 
 a:focus {
@@ -44,7 +51,7 @@ a:hover {
 
 h1 {
   .HeaderFont;
-  font-size: 3em;
+  font-size: 2.6em;
   margin: 0.563em 0;
 }
 
@@ -78,7 +85,7 @@ h6 {
   margin: 0.75em 0;
 }
 
-h1.posttitle_uber {
+h1.tle_uber {
   .PostTitleColor;
   font-weight: 700;
   position: relative;
@@ -88,31 +95,54 @@ h1.posttitle_uber {
 }
 
 p.blogdescription_uber, p.blogdescription_uber a {
-    font-size: 1.313rem;
+    font-size: 2rem;
     margin: 0;
     text-decoration: none;
 }
 
 
+.alt_header h1 a,.header_uber h1 a{
+  font-size: 2.7em;
+  color: @color_02;
+}
+.blogdescription_uber a{
 
+  color: @color_02;
+}
 
 .header_uber {
     .HeaderColor;
+
     text-align: center;
     padding-top: 1.5 * @golden + 0em;
     padding-bottom: 3 * @golden + 0em;
     margin-bottom: 0.25em;
 }
 
-.article_uber {
-    .ArticleColor;
-    padding: 0 @add_padding + 0em @add_padding + 0em @add_padding + 0em;
+.post-container {
+
     margin-bottom: 0.25em;
+
+    .read-more-button a:link,.read-more-button a:visited{
+      color: @color_02;
+    }
+    .read-more-button a:hover {
+      color: @color_03;
+    }
 }
 
-
-
-
-h1.posttitle_uber {
+h1.post-title {
     .PostTitleColor;
+text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.post-header-alt h1.post-title{
+  .PostTitleColor-black;
+  text-shadow: none;
+}
+
+.post_tags a{
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: .8em;
 }
