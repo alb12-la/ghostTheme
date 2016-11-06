@@ -1,0 +1,129 @@
+@import "normalize";
+//HEADER
+
+.gs-blog-header {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5 * $golden + 0em;
+    padding-bottom: 3 * $golden + 0em;
+    background-size: 100%;
+    background-image: url(http://i.imgur.com/Yg9Rl0z.jpg);
+    background-position: center center;
+}
+
+
+.gs-content-wrapper{
+  max-width: 940px;
+  min-height: 700px;
+}
+
+
+.gs-post-content{
+  padding: 0px;
+  margin: 10px 0px;
+}
+
+//NAVIGATION
+
+.gs-nav-wrapper{
+  width: 100%;
+  background-color: $color-01;
+}
+
+.gs-nav-container{
+max-width: 940px;
+margin: auto;
+}
+
+.gs-nav li{
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+  margin:20px 5px;
+  display: inline-flex;
+  float: right;
+
+}
+
+.gs-nav li:hover{
+  background-color: $color-02;
+}
+
+.gs-nav a, .gs-nav a:hover{
+  color: $text-color-01;
+  text-decoration: none;
+
+}
+
+
+
+//index
+
+.gs-post-image{
+max-height: 280px;
+overflow: hidden;
+padding: 0px;
+padding-top: 24px;
+}
+
+.gs-post-image img{
+  transform: translateX(-22%);
+  max-height: 280px;
+  max-width: inherit;
+}
+
+.gs-post-container{
+  padding:($add_padding/2+0em);
+   border-bottom: 2px solid rgba(0, 0, 0, 0.38);
+}
+
+.gs-post-tags{
+  text-align: right;
+  margin: 10px 0px;
+}
+
+
+.gs-main-wrapper{
+  padding: 25px;
+}
+
+.gs-read-more{
+  margin: 10px 0px;
+}
+
+
+
+//INDIVIDUAL POSTS
+
+//FOOTER
+.gs-footer{
+  background-color: $theme-color-01;
+  padding:($add_padding/2);
+  text-align: center;
+
+  .gs-social-media{
+    display: inline-flex;
+    padding: 0px;
+    list-style: none;
+  }
+  .gs-social-media li{
+    margin: 0px 5px;
+  }
+  .gs-social-media img{
+    max-width: 40px;
+  }
+}
+
+
+///BOOTSTRAP OVERRIDE
+.btn-default{
+  background-color: $color-01;
+  color: $text-color-01;
+
+}
+
+.btn-default:hover{
+  background-color: $color-02;
+  color: $text-color-01;
+}
