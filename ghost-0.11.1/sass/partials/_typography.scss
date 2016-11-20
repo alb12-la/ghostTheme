@@ -14,19 +14,22 @@ a{
 
 }
 
-
+.fa,.fa:hover{
+  margin-right: 5px;
+  text-decoration: none;
+}
 
 
 h1, h1 a, h1 a:focus {
   font-weight: 700;
   font-family: $header_font;
-  color: $header-color-dark;
+  color: $header-color-dark-a;
   text-decoration: none;
   margin: 0 0px;
   text-transform: capitalize;
 }
 h1 a:hover{
-  color: $color-02;
+  color: $header-color-dark;
   text-decoration: none;
 }
 
@@ -44,14 +47,20 @@ h4{
 
 
 .gs-post-info,.gs-post-tags, .gs-single-post-info , .gs-single-post-tags{
-//text-transform: uppercase;
+  text-transform:capitalize;
+
 
 }
 
 .gs-post-tags,.gs-single-post-tags{
-  a{
+
+
+  a,a:hover{
     font-size: .7em;
+    text-transform: capitalize;
+    text-decoration: none;
   }
+
 
 }
 
@@ -68,12 +77,19 @@ h4{
   width: 100%;
   height: 35vh;
 }
+.gs-single-post-header-dark{
+  padding: 25px;
+}
 
-.gs-single-post-header-wrapper{
+
+
+.gs-img-header .gs-single-post-header-wrapper{
   position: absolute;
-  width: 100vw;
+  width: 100%;
   bottom: 25px;
 }
+
+
 
 .gs-single-post-header{
   width:$max-article-width;
@@ -86,7 +102,7 @@ h4{
 
 .gs-single-post-header-light {
   @extend .gs-single-post-header;
-  h1,h1,h4,a{
+  h1,h1,h4,a, .gs-single-post-tags  {
     color: $header-color-light;
     text-shadow:2px 2px rgba(25, 23, 23, 0.39);
 
@@ -103,4 +119,5 @@ h4{
 
 .gs-main-wrapper{
   max-width: 920px;
+
 }

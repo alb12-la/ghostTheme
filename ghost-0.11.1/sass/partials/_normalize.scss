@@ -138,6 +138,7 @@ h1 {
   ol,
   ul {
     @include output-rhythm(margin, rhythm(1) 0);
+    margin: 0px;
   }
 
   /**
